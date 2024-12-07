@@ -9,9 +9,9 @@ function main(){
   let distance = 0
   
   lines.forEach((line) => {
-    const list = line.split(/(\s+)/).map(Number);
+    const list = line.split(/\s+/).map(Number);
     leftList.push(list[0]);
-    rightList.push(list[2]);
+    rightList.push(list[1]);
   });
   leftList.sort();
   rightList.sort();

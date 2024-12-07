@@ -11,11 +11,10 @@ function main(){
   lines.forEach((line) => {
     const list = line.split(/\s+/).map(Number);
     leftList.push(list[0]);
-    rightList.push(list[2]);
+    rightList.push(list[1]);
   });
   leftList.sort();
   rightList.sort();
-  
   leftList.forEach((item)=> {
     const count = rightList.filter((v) => (v === item)).length;
     similiarity += item * count;
