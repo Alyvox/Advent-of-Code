@@ -7,7 +7,6 @@ function isSafe(reports: number[]){
   let type: number = 0; // 0 undefined, 1 increasing, 2 decreasing
   for(let i = 1; i < reports.length; i++){
     let difference = reports[i] - reports[i-1];
-    // console.log(type, difference)
     if(Math.abs(difference) > 3 || Math.abs(difference) < 1){
       return false;
     }

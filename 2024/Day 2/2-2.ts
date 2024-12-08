@@ -30,7 +30,7 @@ function isSafe(reports: number[]){
   return true;
 }
 
-function test(reports: number[]){
+function isSafeTollerate(reports: number[]){
   if(isSafe(reports)) return true;
   
   for(let i = 0; i < reports.length; i++) {
@@ -46,7 +46,7 @@ function main() {
 
   lines.forEach((line) => {
     const reports: number[] = line.split(/\s+/).map(Number);
-    if(test(reports)) safe++;
+    if(isSafeTollerate(reports)) safe++;
   });
 
   console.log(safe);
